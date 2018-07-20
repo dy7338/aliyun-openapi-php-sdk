@@ -49,6 +49,8 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 
 	private  $dBInstanceClass;
 
+	private  $dbNames;
+
 	private  $vSwitchId;
 
 	private  $privateIpAddress;
@@ -56,6 +58,8 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 	private  $resourceGroupId;
 
 	private  $vPCId;
+
+	private  $zoneId;
 
 	private  $dBInstanceDescription;
 
@@ -164,6 +168,15 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceClass"]=$dBInstanceClass;
 	}
 
+	public function getDbNames() {
+		return $this->dbNames;
+	}
+
+	public function setDbNames($dbNames) {
+		$this->dbNames = $dbNames;
+		$this->queryParameters["DbNames"]=$dbNames;
+	}
+
 	public function getVSwitchId() {
 		return $this->vSwitchId;
 	}
@@ -198,6 +211,15 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 	public function setVPCId($vPCId) {
 		$this->vPCId = $vPCId;
 		$this->queryParameters["VPCId"]=$vPCId;
+	}
+
+	public function getZoneId() {
+		return $this->zoneId;
+	}
+
+	public function setZoneId($zoneId) {
+		$this->zoneId = $zoneId;
+		$this->queryParameters["ZoneId"]=$zoneId;
 	}
 
 	public function getDBInstanceDescription() {

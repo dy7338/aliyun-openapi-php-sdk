@@ -37,6 +37,8 @@ class CreateScenarioRequest extends \RpcAcsRequest
 
 	private  $description;
 
+	private  $type;
+
 	public function getInstanceId() {
 		return $this->instanceId;
 	}
@@ -82,6 +84,15 @@ class CreateScenarioRequest extends \RpcAcsRequest
 	public function setDescription($description) {
 		$this->description = $description;
 		$this->queryParameters["Description"]=$description;
+	}
+
+	public function getType() {
+		return $this->type;
+	}
+
+	public function setType($type) {
+		$this->type = $type;
+		$this->queryParameters["Type"]=$type;
 	}
 	
 }

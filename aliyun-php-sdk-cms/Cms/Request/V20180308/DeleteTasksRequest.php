@@ -27,7 +27,18 @@ class DeleteTasksRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
+	private  $isDeleteAlarms;
+
 	private  $taskIds;
+
+	public function getIsDeleteAlarms() {
+		return $this->isDeleteAlarms;
+	}
+
+	public function setIsDeleteAlarms($isDeleteAlarms) {
+		$this->isDeleteAlarms = $isDeleteAlarms;
+		$this->queryParameters["IsDeleteAlarms"]=$isDeleteAlarms;
+	}
 
 	public function getTaskIds() {
 		return $this->taskIds;

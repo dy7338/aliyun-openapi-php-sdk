@@ -31,8 +31,6 @@ class ConvertOfficeFormatRequest extends \RpcAcsRequest
 
 	private  $srcType;
 
-	private  $notifyTopicName;
-
 	private  $modelId;
 
 	private  $project;
@@ -47,13 +45,13 @@ class ConvertOfficeFormatRequest extends \RpcAcsRequest
 
 	private  $sheetOnePage;
 
+	private  $password;
+
 	private  $startPage;
 
 	private  $maxSheetCol;
 
 	private  $tgtType;
-
-	private  $notifyEndpoint;
 
 	private  $srcUri;
 
@@ -75,15 +73,6 @@ class ConvertOfficeFormatRequest extends \RpcAcsRequest
 	public function setSrcType($srcType) {
 		$this->srcType = $srcType;
 		$this->queryParameters["SrcType"]=$srcType;
-	}
-
-	public function getNotifyTopicName() {
-		return $this->notifyTopicName;
-	}
-
-	public function setNotifyTopicName($notifyTopicName) {
-		$this->notifyTopicName = $notifyTopicName;
-		$this->queryParameters["NotifyTopicName"]=$notifyTopicName;
 	}
 
 	public function getModelId() {
@@ -149,6 +138,15 @@ class ConvertOfficeFormatRequest extends \RpcAcsRequest
 		$this->queryParameters["SheetOnePage"]=$sheetOnePage;
 	}
 
+	public function getPassword() {
+		return $this->password;
+	}
+
+	public function setPassword($password) {
+		$this->password = $password;
+		$this->queryParameters["Password"]=$password;
+	}
+
 	public function getStartPage() {
 		return $this->startPage;
 	}
@@ -174,15 +172,6 @@ class ConvertOfficeFormatRequest extends \RpcAcsRequest
 	public function setTgtType($tgtType) {
 		$this->tgtType = $tgtType;
 		$this->queryParameters["TgtType"]=$tgtType;
-	}
-
-	public function getNotifyEndpoint() {
-		return $this->notifyEndpoint;
-	}
-
-	public function setNotifyEndpoint($notifyEndpoint) {
-		$this->notifyEndpoint = $notifyEndpoint;
-		$this->queryParameters["NotifyEndpoint"]=$notifyEndpoint;
 	}
 
 	public function getSrcUri() {
